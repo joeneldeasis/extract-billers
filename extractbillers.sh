@@ -8,7 +8,7 @@ else
 
 biller_count=$(grep meta $1 | wc -l | tr -d \ )
 
-for i in {0..100}
+for i in {0..1624}
 
 do
     #set the json values to variables
