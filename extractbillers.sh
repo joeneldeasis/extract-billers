@@ -18,7 +18,7 @@ do
     biller_meta=$(cat billers.json | jq '.data.listings.institutions['$i'].meta' | tr -d \")
 
 #create javascript file for billers
-cat <<EOF > BC_$biller_code.tmp
+cat <<EOF > $biller_code.tmp
 import billerForm from '../utils/billers_form';
 
 export default billerForm(
@@ -33,9 +33,9 @@ EOF
     #log current process
     echo "Extracting biller $biller_name"
     #beautify the javscript code
-    js-beautify BC_$biller_code.tmp >> js/BC_$biller_code.js
+    js-beautify $biller_code.tmp >> js/$biller_code.js
     #remove the temporary file
-    rm -f BC_$biller_code.tmp
+    rm -f $biller_code.tmp
 
 done
 fi
