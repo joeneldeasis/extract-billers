@@ -7,6 +7,9 @@ Get the billers json: `wget http//<api_here>/api/site/billers/all -O billers.jso
 Install js-beautify: `npm -g install js-beautify`
 
 ### Usage
-`chmod +x extractbillers.sh`
 
-`sh extractbillers.sh path/to/billers.json`
+Create a js directory: `mkdir js`
+
+Make the script executable: `chmod +x extractbillers.sh`
+
+Run the script that extract all the billers: `sh extractbillers.sh path/to/billers.json`
