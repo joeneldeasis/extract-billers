@@ -6,8 +6,6 @@ then
     echo "Usage: $0 path/to/billers.json"
 else
 
-biller_count=$(grep meta $1 | wc -l | tr -d \ )
-
 for i in {0..1624}
 
 do
